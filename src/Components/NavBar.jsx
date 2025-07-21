@@ -9,7 +9,7 @@ const NavBar = () => {
     
 
 
-    return <motion.nav className=' mb-8  px-4  flex justify-between items-center py-6 mx-8 sm:mx-16 lg:mx-32  '>
+    return <motion.nav className=' mb-8  px-4  flex justify-between items-center py-6 mx-8 sm:mx-16 lg:mx-32   '>
         <div className='flex shrink-0 items-center'>
             <img src={CSLogo} alt="CSLogo"
                 height={55}
@@ -17,7 +17,7 @@ const NavBar = () => {
                 className=' rounded-4xl border-orange-600 border-8'
             />
         </div>
-        <motion.div  className=' hidden sm:flex justify-between items-center gap-2'>
+        <motion.div  className=' hidden md:flex justify-between items-center gap-2'>
             <button
                 
                 className='px-4 py-2 bg-orange-600 rounded-3xl animate-bounce duration-1500'>Home</button>
