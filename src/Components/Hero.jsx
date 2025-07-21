@@ -1,11 +1,11 @@
 import React from 'react'
-
+import profile from '../assets/Profile2.jpg'
 const Hero = () => {
   return (
-      <div className='border-b border-y-neutral-900 pb-4 lg:mb-36'>
-          <div className='flex flex-wrap '>
-              <div className='w-full lg:w-1/2'>
-                  <div className='flex flex-col  justify-between gap-2 '>
+      <div className='border-b border-y-neutral-900 pb-4  mx-2 lg:mx-32 sm:mx-16 lg:mb-36'>
+          <div className='flex flex-wrap  '>
+              <div className='w-full lg:w-1/2 flex items-center max-lg:justify-center'>
+                  <div className='flex flex-col max-lg:items-center  justify-between gap-2 '>
                       <h6 className=' text-2xl font-serif text-neutral-300 ps-1'>Namaste Dosto <span className='text-4xl'>&#128075;</span></h6>
 
                       <h1 className=' text-4xl lg:text-5xl font-extrabold bg-gradient-to-r from-pink-400 via-slate-500 to-purple-700 bg-clip-text py-1.5
@@ -22,7 +22,13 @@ const Hero = () => {
                       
               </div>
               </div>
-              <div className='w-full lg:w-1/2'></div>
+              <div className=' hidden lg:flex justify-end w-1/2 lg:p-2 '>
+                  <div className='flex justify-center relative '>
+                      <img src={profile} alt="Profile Picture"
+                      className=' overflow-hidden rounded-2xl size-80 hover:scale-110 duration-700 shrink-0  '
+                      />
+              </div>
+              </div>
               <div></div>
           </div>
     </div>
