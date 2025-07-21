@@ -2,6 +2,7 @@ import React from 'react'
 import NavBar from './Components/NavBar'
 import Hero from './Components/Hero'
 import About from './Components/About'
+import Technologies from './Components/Technologies'
 
 const App = () => {
   return (
@@ -13,7 +14,8 @@ const App = () => {
       <div className=' container mx-auto   '>
         <NavBar />
         <Hero />
-        <About/>
+        <About />
+        <Technologies/>
       </div>
     </div>
   )

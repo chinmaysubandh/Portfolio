@@ -26,9 +26,9 @@ const NavBar = () => {
             <button className='px-4 py-2 bg-transparent rounded-3xl' >Contact</button>
         </motion.div>
         <div className='mb-8 flex justify-center items-center gap-6 pt-8 text-2xl'>
-            <BsLinkedin />
-            <BsTwitterX />
-            <BsGithub/>
+            <BsLinkedin className='text-blue-500' />
+            <BsTwitterX className='text-white' />
+            <BsGithub className='text-white'/>
       </div>
   </motion.nav>
 }
