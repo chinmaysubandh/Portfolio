@@ -1,43 +1,29 @@
+import { motion } from 'motion/react'
+import { nav } from 'motion/react-client'
 import React from 'react'
-import { Link } from 'react-router-dom'
-import logo from '../assets/raviKumarLogo.webp'
-import { BsGithub, BsInstagram, BsLinkedin, BsTwitterX } from 'react-icons/bs'
-
-
+import CSLogo from '../assets/CSLogo.png'
+import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs'
 const NavBar = () => {
-  return (
-      <nav className='flex items-center justify-between py-6 lg:mx-28'>
-          <div className='flex items-center shrink-0'>
-              <a to={'/'} aria-label='Home'/>
-              <img src={logo} alt="" width={50} height={33}  className='mx-2' />
-          </div>
-          <div className='flex items-center justify-center m-8 gap-4 text-2xl'>
-              <a href={'https://www.linkedin.com/in/chinmay-subandh/'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label='LinkedIn'
-              ><BsLinkedin/></a>
-
-              <a href={'https://x.com/ChinmaySubandh'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label='Twitter'
-              ><BsTwitterX /></a>
-
-              {/* <a href={'https://www.linkedin.com/in/chinmay-subandh/'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label='Instagram'
-              ><BsInstagram /></a> */}
-
-              <a href={'https://github.com/chinmaysubandh'}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label='GitHub'
-              ><BsGithub /></a>
-          </div>
-    </nav>
-  )
+    return <motion.nav className='text-white mb-8 flex justify-between items-center py-6 mx-18'>
+        <div className='flex shrink-0 items-center'>
+            <img src={CSLogo} alt=""
+                height={55}
+                width={55}
+                className=' rounded-4xl border-orange-600 border-8'
+            />
+        </div>
+        <div className=' hidden sm:flex justify-between items-center gap-4'>
+            <button className='px-6 py-2 bg-orange-600 rounded-3xl animate-bounce duration-1000'>Home</button>
+            <button className='px-6 py-2 bg-transparent rounded-3xl' >About</button>
+            <button className='px-6 py-2 bg-transparent rounded-3xl' >Projects</button>
+            <button className='px-6 py-2 bg-transparent rounded-3xl' >Contact</button>
+        </div>
+        <div className='mb-8 flex justify-center items-center gap-4 pt-8 text-2xl'>
+            <BsLinkedin />
+            <BsTwitterX />
+            <BsGithub/>
+      </div>
+  </motion.nav>
 }
 
 export default NavBar
