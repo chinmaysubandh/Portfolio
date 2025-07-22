@@ -4,6 +4,7 @@ import Hero from './Components/Hero'
 import About from './Components/About'
 import Technologies from './Components/Technologies'
 import Projects from './Components/Projects'
+import Contact from './Components/Contact'
 
 const App = () => {
   return (
@@ -16,7 +17,8 @@ const App = () => {
         <NavBar />
         <Hero />
         <About />
-        <Projects/>
+        <Projects />
+        <Contact/>
       </div>
     </div>
   )

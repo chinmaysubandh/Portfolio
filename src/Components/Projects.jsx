@@ -9,7 +9,7 @@ import { MdArrowOutward } from 'react-icons/md'
 const Projects = () => {
   return (
       <div className='py-4 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden'>
-          <h2 className='my-20 text-4xl text-center text-slate-100'>Projects</h2>
+          <h2 className='my-20 text-4xl text-center text-slate-100 font-bold'>Projects</h2>
           <div>
               {PROJECTS.map((items, index) => (
                    <div key={index} className='my-8 flex flex-wrap justify-between lg:justify-center'>
@@ -17,7 +17,7 @@ const Projects = () => {
                           <img src={items.image} alt={items.title}
                               height={150}
                               width={250}
-                              className=' rounded-2xl mb-6'
+                              className=' rounded-2xl mb-6 '
                           />
                       </div>
                       <div className='w-full max-w-xl lg:w-3/4'>
