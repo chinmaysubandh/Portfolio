@@ -14,14 +14,13 @@ const Projects = () => {
           <div>
               {PROJECTS.map((items, index) => (
                    <div key={index} className='my-8 flex flex-wrap justify-between lg:justify-center'>
-                      <div className=' w-full lg:w-1/4 flex flex-wrap '>
+                      <div className=' w-full lg:w-1/4 flex flex-wrap mx-4'>
                           <motion.img
                               whileInView={{ opacity: 1, x: 0 }}
                               initial={{ opacity: 0, x: -100 }}
                               transition={{ duration: 1 }}
                               src={items.image} alt={items.title}
-                              height={150}
-                              width={250}
+                              
                               className=' rounded-2xl mb-6 '
                           />
                       </div>
