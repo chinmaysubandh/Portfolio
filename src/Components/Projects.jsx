@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const Projects = () => {
   return (
-      <div className='py-4 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden'>
+      <div id='Project' className='py-4 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden'>
           <motion.h2
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 100 }}

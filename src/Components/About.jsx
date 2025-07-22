@@ -14,7 +14,7 @@ import { motion } from 'motion/react'
 
 const About = () => {
   return (
-    <div className=' py-10 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden '>
+    <div id='About' className=' py-10 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden '>
       <div className='flex flex-col flex-wrap py-20 w-full h-full '>
         <motion.h1
           whileInView={{ opacity: 1, x: 0 }}
@@ -200,6 +200,7 @@ export const DataBasses = () => {
 
 export const OtherTools = React.memo(() => {
   return <motion.div
+    
     whileInView={{ opacity: 1, y: 0 }}
     initial={{ opacity: 0, y: 100 }}
     transition={{ duration: 1 }}
