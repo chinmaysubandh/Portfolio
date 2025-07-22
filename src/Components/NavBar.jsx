@@ -26,9 +26,12 @@ const NavBar = () => {
             <button className='px-4 py-2 bg-transparent rounded-3xl' >Contact</button>
         </motion.div>
         <div className='mb-8 flex justify-center items-center gap-6 pt-8 text-2xl'>
-            <BsLinkedin className='text-blue-500' />
-            <BsTwitterX className='text-white' />
-            <BsGithub className='text-white'/>
+            <a href="https://www.linkedin.com/in/chinmay-subandh/" target={'_blank'}><BsLinkedin className='text-blue-500' /></a>
+            <a href="https://x.com/ChinmaySubandh" target={'_blank'}><BsTwitterX className='text-white' /></a>
+            <a href="https://www.github.com/chinmaysubandh" target={'_blank'}><BsGithub className='text-white' /></a>
+            
+            
+            
       </div>
   </motion.nav>
 }

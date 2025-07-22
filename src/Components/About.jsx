@@ -16,7 +16,7 @@ const About = () => {
     <div className=' py-10 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden '>
       <div className='flex flex-col flex-wrap py-20 w-full h-full '>
         <h1 className='text-4xl text-center text-slate-100 pb-8 font-semibold'>About<span className='text-slate-500'>Me</span></h1>
-        <p className='text-xl pb-12'>{ABOUT_TEXT}</p>
+        <p className='text-xl pb-12 text-justify'>{ABOUT_TEXT}</p>
 
         <div className='flex flex-col pt-8 pb-2 flex-wrap w-full h-full'>
           <h3 className='text-3xl text-slate-100 font-semibold'>Skills</h3>
@@ -35,8 +35,8 @@ const About = () => {
 
 export default About
 
-export const Languages = () => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+export const Languages = React.memo(() => {
+  return <div className='flex flex-col flex-wrap py-18 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>Languages</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm
@@ -53,9 +53,9 @@ export const Languages = () => {
 
     </div>
   </div>
-}
+})
 
-export const FrontEndFrameWorks = () => {
+export const FrontEndFrameWorks = React.memo(() => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>FrontEnd Frameworks</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -68,9 +68,9 @@ export const FrontEndFrameWorks = () => {
 
     </div>
   </div>
-}
+})
 
-export const ReactEcosystem = () => {
+export const ReactEcosystem = React.memo(() => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -80,16 +80,16 @@ export const ReactEcosystem = () => {
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><SiRecoil className='text-xl text-blue-400' /> Recoil</span>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><TbBrandRedux className='text-xl text-purple-500' />Redux</span>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><SiJest className='text-xl text-orange-600'/> Jest</span>
-      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><SiAxios className='text-xl text-blue-200'/> Axios</span>
+      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><SiAxios className='text-xl text-blue-400'/> Axios</span>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center '><TbBrandFramerMotion className='text-xl text-yellow-300' /> Motion</span>
 
 
 
     </div>
   </div>
-}
+})
 
-export const ComponentLibraries = () => {
+export const ComponentLibraries =React.memo( () => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -105,9 +105,9 @@ export const ComponentLibraries = () => {
 
     </div>
   </div>
-}
+})
 
-export const CssStyling = () => {
+export const CssStyling = React.memo(() => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>CSS Styling</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -119,10 +119,10 @@ export const CssStyling = () => {
 
     </div>
   </div>
-}
+})
 
 
-export const BackEnd = () => {
+export const BackEnd = React.memo(() => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -138,7 +138,7 @@ export const BackEnd = () => {
 
     </div>
   </div>
-}
+})
 
 export const DataBases = () => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
@@ -158,17 +158,17 @@ export const DataBases = () => {
   </div>
 }
 
-export const OtherTools = () => {
+export const OtherTools = React.memo(() => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>Other Tools</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
-      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><VscCode className='text-xl text-cyan-400'/> VS Code</span>
+      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><VscCode className='text-xl text-cyan-400' /> VS Code</span>
 
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><IoIosGitBranch className='text-xl text-orange-500' /> Git</span>
-      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><FiGithub className='text-xl text-white'/> GitHub</span>
+      <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><FiGithub className='text-xl text-white' /> GitHub</span>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><FiFigma className='text-xl text-blue-600' /> Figma</span>
 
 
     </div>
   </div>
-}
+})
