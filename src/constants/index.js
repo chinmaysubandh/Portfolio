@@ -19,21 +19,27 @@ export const PROJECTS = [
     image: project2,
     description:
       "An application for managing tasks and projects, with features such as task creation, assignment, and progress tracking.",
-    technologies: ["HTML", "CSS", "Javascript", "Reactjs"],
+    technologies: ["HTML", "CSS", "Javascript", "Reactjs", "Context API"],
+    Github: 'https://github.com/chinmaysubandh/TaskManager',
+    Live:''
   },
   {
     title: "Portfolio Website",
     image: project3,
     description:
       "A personal portfolio website showcasing projects, skills, and contact information.",
-    technologies: ["HTML", "CSS", "React", "Tailwindcss","Framer Motion"],
+    technologies: ["HTML", "CSS", "React", "Tailwindcss", "Framer Motion"],
+    Github: 'https://github.com/chinmaysubandh/Portfolio',
+    Live:''
   },
   {
     title: "Blogging Platform",
     image: project4,
     description:
       "A platform for creating and publishing blog posts, with features like rich text editing, commenting, and user profiles.",
-    technologies: ["HTML", "CSS","Javascript", "ReactJS", "Tailwindcss"],
+    technologies: ["HTML", "CSS", "Javascript", "ReactJS", "Tailwindcss"],
+    Github: 'https://github.com/chinmaysubandh/DevOutlets',
+    Live:''
   },
 ];
 

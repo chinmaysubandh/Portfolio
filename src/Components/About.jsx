@@ -10,20 +10,39 @@ import { SiAxios, SiCssmodules, SiJest, SiReactrouter, SiRecoil } from 'react-ic
 import { VscCode } from 'react-icons/vsc'
 import { FiFigma, FiGithub } from 'react-icons/fi'
 import { IoIosGitBranch } from 'react-icons/io'
+import { motion } from 'motion/react'
 
 const About = () => {
   return (
     <div className=' py-10 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden '>
       <div className='flex flex-col flex-wrap py-20 w-full h-full '>
-        <h1 className='text-4xl text-center text-slate-100 pb-8 font-semibold'>About<span className='text-slate-500'>Me</span></h1>
-        <p className='text-xl pb-12 text-justify'>{ABOUT_TEXT}</p>
+        <motion.h1
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: -100 }}
+          transition={{duration:0.5}}
+          className='text-4xl text-center text-slate-100 pb-8 font-semibold'>About<span className='text-slate-500'>Me</span></motion.h1>
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 100 }}
+          transition={{duration:1}}
+          className='text-xl pb-12 text-justify'>{ABOUT_TEXT}</motion.p>
 
         <div className='flex flex-col pt-8 pb-2 flex-wrap w-full h-full'>
-          <h3 className='text-3xl text-slate-100 font-semibold'>Skills</h3>
-          <p className='text-xl py-2'>I craft smooth, user-centric applications with the power of modern web technologies. My tech stack includes:</p>
+          <motion.h3
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1 }}
+            className='text-3xl text-slate-100 font-semibold'>Skills</motion.h3>
+          <motion.p
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 100 }}
+            transition={{ duration: 1 }}
+            className='text-xl py-2'>I craft smooth, user-centric applications with the power of modern web technologies. My tech stack includes:</motion.p>
         </div>
-        <Languages />
-        <FrontEndFrameWorks />
+        <Languages
+        />
+        <FrontEndFrameWorks 
+        />
         <ReactEcosystem />
         <CssStyling />
         <OtherTools/>
@@ -36,7 +55,11 @@ const About = () => {
 export default About
 
 export const Languages = React.memo(() => {
-  return <div className='flex flex-col flex-wrap py-18 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    className='flex flex-col flex-wrap py-18 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>Languages</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm
@@ -52,11 +75,15 @@ export const Languages = React.memo(() => {
        text-slate-200 font-light font-mono flex items-center'><TbBrandTypescript className='text-xl text-blue-400' />TYPESCRIPT</span>
 
     </div>
-  </div>
+  </motion.div>
 })
 
 export const FrontEndFrameWorks = React.memo(() => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>FrontEnd Frameworks</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
 
@@ -67,11 +94,15 @@ export const FrontEndFrameWorks = React.memo(() => {
 
 
     </div>
-  </div>
+  </motion.div>
 })
 
 export const ReactEcosystem = React.memo(() => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center '><TbBrandFramerMotion className='text-xl text-yellow-300' /> Framer Motion</span>
@@ -86,11 +117,15 @@ export const ReactEcosystem = React.memo(() => {
 
 
     </div>
-  </div>
+  </motion.div>
 })
 
 export const ComponentLibraries =React.memo( () => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'>Framer Motion</span>
@@ -104,11 +139,16 @@ export const ComponentLibraries =React.memo( () => {
 
 
     </div>
-  </div>
+  </motion.div>
 })
 
 export const CssStyling = React.memo(() => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    
+    className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>CSS Styling</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><RiTailwindCssFill className='text-xl text-cyan-400'/> TailwindCss</span>
@@ -118,7 +158,7 @@ export const CssStyling = React.memo(() => {
 
 
     </div>
-  </div>
+  </motion.div>
 })
 
 
@@ -140,7 +180,7 @@ export const BackEnd = React.memo(() => {
   </div>
 })
 
-export const DataBases = () => {
+export const DataBasses = () => {
   return <div className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>React Ecosystems</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
@@ -159,7 +199,11 @@ export const DataBases = () => {
 }
 
 export const OtherTools = React.memo(() => {
-  return <div className='flex flex-col flex-wrap py-8 gap-4'>
+  return <motion.div
+    whileInView={{ opacity: 1, y: 0 }}
+    initial={{ opacity: 0, y: 100 }}
+    transition={{ duration: 1 }}
+    className='flex flex-col flex-wrap py-8 gap-4'>
     <h4 className='text-2xl text-slate-100 font-semibold'>Other Tools</h4>
     <div className='flex flex-wrap items-center justify-baseline gap-2'>
       <span className='py-0.5 px-4 rounded-full bg-slate-700 hover:bg-slate-800 text-sm text-slate-200 font-light font-mono flex items-center'><VscCode className='text-xl text-cyan-400' /> VS Code</span>
@@ -170,5 +214,5 @@ export const OtherTools = React.memo(() => {
 
 
     </div>
-  </div>
+  </motion.div>
 })

@@ -14,7 +14,7 @@ const NavBar = () => {
             <img src={CSLogo} alt="CSLogo"
                 height={55}
                 width={55}
-                className=' rounded-4xl border-orange-600 border-8'
+                className=' rounded-full border-orange-600 border-2'
             />
         </div>
         <motion.div  className=' hidden md:flex justify-between items-center gap-2'>
