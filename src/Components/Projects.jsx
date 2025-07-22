@@ -23,10 +23,10 @@ const Projects = () => {
                       <div className='w-full max-w-xl lg:w-3/4'>
                           <h2 className='my-2 font-semibold text-2xl'>{items.title}</h2>
                           <p className='my-4 font-normal '>{items.description}</p>
-                          <div className=' flex gap-4 py-2 '>
+                          <div className=' flex flex-wrap gap-1 my-auto overflow-auto py-2 items-center justify-start '>
                               {items.technologies.map((tech, index) => {
-                                  return <div className='flex flex-col gap-4'>
-                                      <span className='px-4 py-2 gap-4 rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold'>
+                                  return <div className='flex'>
+                                      <span className='px-4 py-2  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold'>
                                           {tech}
                                       </span>
                                       
