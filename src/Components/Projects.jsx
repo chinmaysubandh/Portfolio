@@ -33,7 +33,7 @@ const Projects = () => {
                           <p className='my-4 font-normal '>{items.description}</p>
                           <div className=' flex flex-wrap gap-1 my-auto overflow-auto py-2 items-center justify-start '>
                               {items.technologies.map((tech, index) => {
-                                  return <div className='flex'>
+                                  return <div key={index} className='flex'>
                                       <span className='px-4 py-2  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold'>
                                           {tech}
                                       </span>
@@ -42,7 +42,7 @@ const Projects = () => {
                                   
                               })}
                           </div>
-                          <div className='flex flex-wrap gap-4 py-2 px-4 my-4 '>
+                          <div key={index} className='flex flex-wrap gap-4 py-2 px-4 my-4 '>
                               <a href={items.Github} target={'_blank'}><FaGithub className='bg-black text-3xl text-white rounded-full hover:scale-125 duration-700' /></a>
                               <a href={items.Github} target={'_blank'}><MdArrowOutward className='text-white text-3xl rounded-full hover:scale-125 duration-700 bg-slate-800' /></a>
                           </div>

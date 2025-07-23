@@ -4,14 +4,13 @@ import { div } from 'motion/react-client'
 import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs'
 import CSLogo from '../assets/CSLogo.png'
 import { motion } from 'motion/react'
-import { ScrollTo } from './NavBar'
 
 const Contact = () => {
 
 
     /* bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] */
     return (
-        <div id='Contact' className={`w-full h-full mt-16 flex flex-wrap flex-col `}>
+        <div className={`w-full h-full mt-16 flex flex-wrap flex-col `}>
             <div className='py-4  px-8 sm:px-16 lg:px-32 overflow-x-hidden '>
                 <motion.h2
                     whileInView={{ opacity: 1, y: 0 }}
@@ -24,7 +23,6 @@ const Contact = () => {
                         
                         <div className='flex shrink-0 items-center w-[25%] max-sm:hidden'>
                             <motion.img
-                                onClick={()=>ScrollTo('Hero')}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 initial={{ opacity: 0, y: 100 }}
                                 transition={{ duration: 1 }}

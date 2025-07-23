@@ -2,17 +2,18 @@ import React from 'react'
 import profile from '../assets/Profile2.jpg'
 import { motion } from 'motion/react'
 
+ export const Container = (delay) => ({
+    hidden: { x: -100, opacity: 0 },
+    visible: {
+        x: 0,
+        opacity: 1,
+        transition: { duration: 1, delay: delay }
+
+    }
+})
 const Hero = () => {
 
-    const Container = (delay) => ({
-        hidden: { x: -100, opacity: 0 },
-        visible: {
-            x: 0,
-            opacity: 1,
-            transition: { duration: 1, delay:delay }
-
-        }
-    })
+    
     return (
         <div  className=' pb-8 my-18  mx-8 sm:mx-16 lg:mx-32'>
             <div className='flex flex-wrap  '>
