@@ -33,6 +33,7 @@ const Contact = () => {
                             />
                         </div>
                         <motion.div
+                            id='Contact'
                             whileInView={{ opacity: 1, y: 0 }}
                             initial={{ opacity: 0, y: 100 }}
                             transition={{ duration: 1 }}
