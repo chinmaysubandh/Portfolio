@@ -40,8 +40,8 @@ const NavBar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.5 }}
 /* */
-        className={`mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2
-              ${scrollDown ? 'mx-12 sm:mx-24 md:mx-42 lg:mx-80 ease-in-out duration-700' : 'mx-8 sm:mx-16 md:mx-32 lg:mx-28 ease-in-out duration-700 '}
+        className={`mb-16  px-4 gap-4 md:gap-8  flex justify-between items-center py-2 md:my-2
+              ${scrollDown ? 'mx-16 sm:mx-24 md:mx-30 lg:mx-60 xl:mx-82 ease-in-out duration-700  ' : 'mx-2 sm:mx-24 md:mx-24 lg:mx-28 ease-in-out duration-700 bg-gray-900 '}
          md:px-8 md:mb-16 fixed top-0 right-0 left-0 backdrop-blur-lg rounded-full z-50   `}>
         <div className='hidden  max-md:flex shrink-0 items-center md:rounded-full'>
             <img src={CSLogo} alt="CSLogo"
