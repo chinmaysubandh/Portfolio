@@ -12,6 +12,7 @@ export const ScrollTo = (id) => {
         const element = document.getElementById(id);
         if (element) {
             element.scrollIntoView({ behavior: "smooth" });
+            
         }
     }
 };
@@ -39,7 +40,9 @@ const NavBar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.5 }}
 /* */
-        className={`mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2  ${scrollDown ? 'mx-32 sm:mx-24 md:mx-42 lg:mx-80 ease-in-out duration-700' : 'mx-8 sm:mx-16 md:mx-32 lg:mx-64 ease-in-out duration-700 '} md:px-8 md:mb-16 fixed top-0 right-0 left-0 backdrop-blur-lg rounded-full z-50   `}>
+        className={`mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2
+              ${scrollDown ? 'mx-12 sm:mx-24 md:mx-42 lg:mx-80 ease-in-out duration-700' : 'mx-8 sm:mx-16 md:mx-32 lg:mx-28 ease-in-out duration-700 '}
+         md:px-8 md:mb-16 fixed top-0 right-0 left-0 backdrop-blur-lg rounded-full z-50   `}>
         <div className='hidden  max-md:flex shrink-0 items-center md:rounded-full'>
             <img src={CSLogo} alt="CSLogo"
                 height={55}
