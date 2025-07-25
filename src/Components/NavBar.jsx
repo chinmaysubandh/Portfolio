@@ -22,7 +22,7 @@ const NavBar = () => {
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.5 }}
         
-        className=' mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2 mx-8 sm:mx-32 lg:mx-64 md:px-8 md:mb-16 md:fixed top-0 right-0 left-0 md:backdrop-blur-lg md:rounded-full   '>
+        className=' mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2 mx-8 sm:mx-32 lg:mx-64 md:px-8 md:mb-16 md:fixed top-0 right-0 left-0 md:backdrop-blur-lg md:rounded-full z-50   '>
         <div className='hidden  max-md:flex shrink-0 items-center md:rounded-full'>
             <img src={CSLogo} alt="CSLogo"
                 height={55}
