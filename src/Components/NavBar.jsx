@@ -1,18 +1,35 @@
 import { motion } from 'motion/react'
 import { nav } from 'motion/react-client'
-import React, { useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import CSLogo from '../assets/CSLogo.png'
 import { BsGithub, BsLinkedin, BsTwitterX } from 'react-icons/bs'
 import About from './About'
 
 export const ScrollTo = (id) => {
-    const element = document.getElementById(id);
-    if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
+    if (id === 'top') {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    } else {
+        const element = document.getElementById(id);
+        if (element) {
+            element.scrollIntoView({ behavior: "smooth" });
+        }
     }
 };
 const NavBar = () => {
+    const [scrollDown, setScrollDown] = useState(false);
 
+    useEffect(() => {
+        const ScrollDownHandler = () => {
+            if (window.scrollY > 20) {
+                setScrollDown(true);
+            } else {
+                setScrollDown(false)
+            }
+        }
+        window.addEventListener('scroll', ScrollDownHandler)
+        return ()=> window.removeEventListener('scroll',ScrollDownHandler)
+
+    },[])
 
 
 
@@ -21,13 +38,13 @@ const NavBar = () => {
         initial={{ opacity: 0, y: -100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1.2, delay: 0.5 }}
-
-        className=' mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2 mx-8 sm:mx-32 lg:mx-64 md:px-8 md:mb-16 md:fixed top-0 right-0 left-0 md:backdrop-blur-lg md:rounded-full z-50   '>
+/* */
+        className={`mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2  ${scrollDown ? 'mx-32 sm:mx-24 md:mx-42 lg:mx-80 ease-in-out duration-700' : 'mx-8 sm:mx-16 md:mx-32 lg:mx-64 ease-in-out duration-700 '} md:px-8 md:mb-16 fixed top-0 right-0 left-0 backdrop-blur-lg rounded-full z-50   `}>
         <div className='hidden  max-md:flex shrink-0 items-center md:rounded-full'>
             <img src={CSLogo} alt="CSLogo"
                 height={55}
                 width={55}
-                onClick={() => ScrollTo('start')}
+                onClick={() => ScrollTo('top')}
                 className=' rounded-full border-orange-600 border-2'
             />
         </div>
@@ -36,7 +53,7 @@ const NavBar = () => {
             className=' hidden md:flex justify-between items-center gap-4'>
             <button
 
-                onClick={() => ScrollTo('start')}
+                onClick={() => ScrollTo('top')}
                 className='px-3 py-1 bg-orange-600 rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' >Home</button>
             <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' onClick={() => ScrollTo('About')} >About</button>
             <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl' onClick={() => ScrollTo('Project')} >Projects</button>

@@ -88,7 +88,7 @@ const Hero = () => {
                             animate={{x:0,opacity:1}}
                             transition={{duration:1,delay:1.2}}
                             src={profile} alt="Profile Picture"
-                            className=' overflow-hidden rounded-2xl size-80 hover:scale-110   '
+                            className=' overflow-hidden rounded-2xl size-80 hover:scale-110 duration-700   '
                         />
                     </div>
                 </div>
