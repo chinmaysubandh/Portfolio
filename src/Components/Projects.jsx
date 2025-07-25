@@ -34,7 +34,7 @@ const Projects = () => {
                           <div className=' flex flex-wrap gap-1 my-auto overflow-auto py-2 items-center justify-start '>
                               {items.technologies.map((tech, index) => {
                                   return <div key={index} className='flex'>
-                                      <span className='px-4 py-2  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold'>
+                                      <span className='px-4 py-2  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold hover:scale-110 hover:flex-wrap duration-700 backdrop-blur-2xl'>
                                           {tech}
                                       </span>
                                       

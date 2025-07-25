@@ -17,24 +17,32 @@ const NavBar = () => {
     
 
 
-    return <motion.nav className=' mb-8  px-4  flex justify-between items-center py-6 mx-8 sm:mx-16 lg:mx-32   '>
-        <div className='flex shrink-0 items-center'>
+    return <motion.nav
+        initial={{ opacity: 0, y: -100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1.2, delay: 0.5 }}
+        
+        className=' mb-16  px-4 gap-4  flex justify-between items-center py-2 md:my-2 mx-8 sm:mx-32 lg:mx-64 md:px-8 md:mb-16 md:fixed top-0 right-0 left-0 md:backdrop-blur-lg md:rounded-full   '>
+        <div className='hidden  max-md:flex shrink-0 items-center md:rounded-full'>
             <img src={CSLogo} alt="CSLogo"
                 height={55}
                 width={55}
+                 onClick={()=>ScrollTo('start')}
                 className=' rounded-full border-orange-600 border-2'
             />
         </div>
-        <motion.div  className=' hidden md:flex justify-between items-center gap-2'>
+        <motion.div
+           
+            className=' hidden md:flex justify-between items-center gap-4'>
             <button
-                id='Hero'
-                onClick={()=>scrollTo('Hero')}
-                className='px-4 py-2 bg-orange-600 rounded-3xl animate-bounce duration-1500' >Home</button>
-            <button className='px-4 py-2 bg-transparent rounded-3xl ' onClick={()=>ScrollTo('About')} >About</button>
-            <button className='px-4 py-2 bg-transparent rounded-3xl' onClick={()=>ScrollTo('Project')} >Projects</button>
-            <button className='px-4 py-2 bg-transparent rounded-3xl' onClick={()=>ScrollTo('Contact')} >Contact</button>
+                
+                onClick={()=>ScrollTo('start')}
+                className='px-3 py-1 bg-orange-600 rounded-3xl ' >Home</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' onClick={()=>ScrollTo('About')} >About</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl' onClick={()=>ScrollTo('Project')} >Projects</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl' onClick={()=>ScrollTo('Contact')} >Contact</button>
         </motion.div>
-        <div className='mb-8 flex justify-center items-center gap-6 pt-8 text-2xl'>
+        <div className=' flex justify-center items-center gap-6 py-1 text-2xl'>
             <a href="https://www.linkedin.com/in/chinmay-subandh/" target={'_blank'}><BsLinkedin className='text-blue-500' /></a>
             <a href="https://x.com/ChinmaySubandh" target={'_blank'}><BsTwitterX className='text-white' /></a>
             <a href="https://www.github.com/chinmaysubandh" target={'_blank'}><BsGithub className='text-white' /></a>
