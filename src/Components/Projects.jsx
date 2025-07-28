@@ -5,7 +5,7 @@ import { motion } from 'motion/react'
 
 const Projects = () => {
   return (
-      <div id='Project' className='py-4 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden'>
+      <div id='Project' className='py-4 mx-8 sm:mx-16 lg:mx-32 overflow-x-hidden '>
           <motion.h2
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: 100 }}
@@ -13,7 +13,7 @@ const Projects = () => {
               className='my-20 text-4xl text-center text-slate-100 font-bold'>Projects</motion.h2>
           <div>
               {PROJECTS.map((items, index) => (
-                   <div key={index} className='my-8 flex flex-wrap justify-between lg:justify-center'>
+                   <div key={index} className='my-8 flex flex-wrap justify-between lg:justify-center '>
                       <div className=' w-full lg:w-1/4 flex flex-wrap mx-4'>
                           <motion.img
                               whileInView={{ opacity: 1, x: 0 }}
@@ -21,7 +21,7 @@ const Projects = () => {
                               transition={{ duration: 1 }}
                               src={items.image} alt={items.title}
                               
-                              className=' rounded-2xl mb-6 '
+                              className=' rounded-2xl mb-6  '
                           />
                       </div>
                       <motion.div
@@ -33,8 +33,8 @@ const Projects = () => {
                           <p className='my-4 font-normal '>{items.description}</p>
                           <div className=' flex flex-wrap gap-1 my-auto overflow-auto py-2 items-center justify-start '>
                               {items.technologies.map((tech, index) => {
-                                  return <div key={index} className='flex'>
-                                      <span className='px-4 py-2  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-sm text-center font-semibold hover:scale-110 hover:flex-wrap duration-700 backdrop-blur-2xl'>
+                                  return <div key={index} className='flex gap-1'>
+                                      <span className='px-4 py-2 mx-0.5  rounded-2xl overflow-auto bg-gray-900 hover:bg-gray-800 text-purple-500 hover:border-b-2 border-orange-600  text-sm text-center font-semibold hover:scale-107 hover:flex-wrap duration-300 backdrop-blur-2xl'>
                                           {tech}
                                       </span>
                                       

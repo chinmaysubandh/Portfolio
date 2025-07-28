@@ -49,9 +49,9 @@ const Contact = () => {
                             initial={{ opacity: 0, y: 100 }}
                             transition={{ duration: 1 }}
                             className='mb-4 flex max-sm:flex-col justify-center items-center gap-6 pt-4 text-2xl w-[25%]'>
-                            <a href="https://www.linkedin.com/in/chinmay-subandh/" target={'_blank'}><BsLinkedin className='text-blue-500' /></a>
-                            <a href="https://x.com/ChinmaySubandh" target={'_blank'}><BsTwitterX className='text-white' /></a>
-                            <a href="https://www.github.com/chinmaysubandh" target={'_blank'}><BsGithub className='text-white' /></a>
+                            <a href="https://www.linkedin.com/in/chinmay-subandh/" target={'_blank'} className='hover:scale-120 duration-200 text-purple-500  hover:shadow-2xl shadow-purple-700 '><BsLinkedin className='text-blue-500' /></a>
+                            <a href="https://x.com/ChinmaySubandh" target={'_blank'} className='hover:scale-120 duration-200 text-purple-500  hover:shadow-2xl shadow-purple-700 '><BsTwitterX className='text-white' /></a>
+                            <a href="https://www.github.com/chinmaysubandh" target={'_blank'} className='hover:scale-120 duration-200 text-purple-500  hover:shadow-2xl shadow-purple-700 '><BsGithub className='text-white' /></a>
                         </motion.div>
 
                     </div>

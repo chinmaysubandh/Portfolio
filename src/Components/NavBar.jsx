@@ -57,10 +57,10 @@ const NavBar = () => {
             <button
 
                 onClick={() => ScrollTo('top')}
-                className='px-3 py-1 bg-orange-600 rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' >Home</button>
-            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' onClick={() => ScrollTo('About')} >About</button>
-            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl' onClick={() => ScrollTo('Project')} >Projects</button>
-            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-700 backdrop-blur-2xl ' onClick={() => ScrollTo('Contact')} >Contact</button>
+                className='px-3 py-1 bg-orange-600 rounded-3xl hover:scale-115 duration-200 backdrop-blur-2xl hover:text-purple-400 hover:font-bold hover:border-b-2 border-orange-600 hover:bg-transparent  ' >Home</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-200 backdrop-blur-2xl text-purple-500 hover:border-b-2 border-orange-600 shadow-amber-600 ' onClick={() => ScrollTo('About')} >About</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-200 backdrop-blur-2xl text-purple-500 hover:border-b-2 border-orange-600 shadow-amber-600' onClick={() => ScrollTo('Project')} >Projects</button>
+            <button className='px-3 py-1 bg-transparent rounded-3xl hover:scale-115 duration-200 backdrop-blur-2xl text-purple-500 hover:border-b-2 border-orange-600 shadow-amber-600 ' onClick={() => ScrollTo('Contact')} >Contact</button>
         </motion.div>
         <div className=' flex justify-center items-center gap-6 py-1 text-2xl'>
 
